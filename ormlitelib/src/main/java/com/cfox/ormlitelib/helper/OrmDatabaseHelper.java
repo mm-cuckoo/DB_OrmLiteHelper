@@ -3,6 +3,11 @@ package com.cfox.ormlitelib.helper;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
+import com.j256.ormlite.misc.TransactionManager;
+import com.j256.ormlite.support.ConnectionSource;
+import com.j256.ormlite.table.TableUtils;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,16 +25,7 @@ import java.util.concurrent.Callable;
  */
 public abstract class OrmDatabaseHelper<T> extends OrmLiteSqliteOpenHelper {
 
-    private static OrmDatabaseHelper sHelper;
-
     private static final String DB_NAME = "ormlite_db.db";
-
-    private static final int DB_VERSION = 1;
-    private static String DATABASE_PATH = null;
-
-    private static String DATABASE_PATH_JOURN = null;
-
-    private Context mContext;
 
     private List<Class<T>> DBtables = new ArrayList<Class<T>>();
 
@@ -79,8 +75,6 @@ public abstract class OrmDatabaseHelper<T> extends OrmLiteSqliteOpenHelper {
     public abstract void createTables(List<Class<T>> tables);
 
     public abstract void updateTables(List<Class<T>> tables);
-
-    public abstract OrmDatabaseHelper getHelper(Context context);
 
 }
 
