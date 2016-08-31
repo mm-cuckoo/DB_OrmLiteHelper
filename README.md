@@ -1,13 +1,5 @@
-### OrmLite 三篇文章
-1. [OrmLite框架 —— OrmLite 入门使用（一）](http://blog.csdn.net/u013501637/article/details/52388802)
-2. [OrmLite框架 —— OrmLite 复杂条件查询（二）](http://blog.csdn.net/u013501637/article/details/52388861)
-3. [OrmLite框架 —— OrmLite 框架封装及使用（三）](http://blog.csdn.net/u013501637/article/details/52388931)
-
-
-
 ### 介绍 
 封装后的工程方便对OrmLite 的使用
-###### [工程GitHub地址  https://github.com/CNCFOX/DB_OrmLiteHelper](https://github.com/CNCFOX/DB_OrmLiteHelper)
 ### 集成方法
 ##### 创建 Helper 类，继承 OrmDatabaseHelper 类
 1. 实现 createTables(List tables)
